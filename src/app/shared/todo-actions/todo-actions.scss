@@ -1,0 +1,15 @@
+.todo-actions {
+    margin-top: 10px;
+    width: 100%;
+    padding: 0px;
+}
+
+.row-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.row-actions-done-delete {
+    margin-right: 4px;
+}

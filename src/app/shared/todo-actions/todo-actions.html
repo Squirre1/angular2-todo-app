@@ -1,0 +1,15 @@
+<div class="todo-actions container">
+    <div class="row-actions">
+        <div class="row-actions-done-delete">
+            <div [hidden]="!active">
+                <button (click)="buttonDoneHandler()" class="btn btn-default">DONE</button>
+                <button (click)="buttonRemoveHandler()" class="btn btn-default">DELETE</button>
+            </div>
+        </div>
+        <div class="row-actions-checked">
+            <div [hidden]="!activeCheckedToggle">
+                <button (click)="buttonToggleTasksHandler()" class="btn btn-default">{{ allChecked ? 'UNCHECKED ALL' : 'CHECKED ALL' }}</button>
+            </div>
+        </div>
+    </div>
+</div>

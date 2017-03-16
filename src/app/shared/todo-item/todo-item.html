@@ -1,0 +1,21 @@
+<div class="todo-item" [class.done-task]="item.done">
+    <div class="task-info">
+        <div>{{ item.id }}.</div>
+        <div class="main-info">
+            <div>{{ item.title }}</div>
+            <div>{{ item.description }}</div>
+        </div>
+    </div>
+    <input
+        class="checkbox"
+        type="checkbox"
+        name="checked"
+        *ngIf="!item.done"
+        [(checked)]="item.checked"
+        (change)="onChangeChecked($event)"
+    >
+    <div
+        *ngIf="item.done"
+        class="checkbox-mark"
+    >
+</div>

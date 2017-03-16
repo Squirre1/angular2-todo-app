@@ -1,0 +1,40 @@
+.create-task-form {
+    display: flex;
+    flex-direction: row;
+}
+
+.field-set {
+    border: none;
+    background-color: #f1f1f1;
+    padding: 10px;
+}
+
+.input-margin {
+    margin-top: 5px
+}
+
+.field-set-block {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.inputs-block {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.button-block {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.create-button {
+    width: 80%;
+}
+
+.field-error {
+    margin: 5px;
+}

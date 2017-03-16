@@ -1,0 +1,16 @@
+<form [formGroup]="newTaskForm" novalidate class="bg-grey" (ngSubmit)="buttonAddHandler(newTaskForm.value, newTaskForm.valid)">
+    <fieldset class="field-set">
+        <div class="field-set-block">
+            <div class="inputs-block">
+                <input class="form-control" autofocus placeholder="TITLE" formControlName="title">
+                <small class="field-error text-danger" [hidden]="noTitleErrors">
+                    task title is required and must be longer
+                </small>
+                <textarea class="form-control input-margin" placeholder="DESCRIPTION" formControlName="description"></textarea>
+            </div>
+            <div class="button-block">
+                <button class="btn btn-default create-button" type="submit">ADD</button>
+            </div>
+        </div>
+    </fieldset>
+</form>

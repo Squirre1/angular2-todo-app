@@ -1,0 +1,15 @@
+<section class="tasks-list">
+    <create-task-form (createTaskEvent)="pushTask($event)"></create-task-form>
+    <div *ngIf="tasks && tasks.length === 0">TASKS NOT EXISTS YET</div>
+    <todo-actions
+        [active]="checkedTasks.length !== 0"
+        [allChecked]="allChecked"
+        [activeCheckedToggle]="activeCheckedToggle"
+        (removeTasksEvent)="removeTasks($event)"
+        (doneTasksEvent)="doneTasks($event)"
+        (toggleTasksEvent)="toggleTasks($event)"
+    ></todo-actions>
+    <div *ngFor="let task of tasks">
+        <todo-item (click)="gotoTaskCard($event, task.id)" [item]="task"></todo-item>
+    </div>
+</section>
